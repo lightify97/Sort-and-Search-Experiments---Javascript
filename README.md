@@ -1,10 +1,11 @@
-# Sort and Search Experimenta - Javascript
+# Sort and Search Experiments - Javascript
 Sort an array and search for a value in that array using binary search. The program language is Javascript, with a little bit of jQuery, HTML, and CSS.
 
 # The aims of this project are:
 
-1) Build a visual representation of the sorting process using Javascript, jQuery, and HTML. 
-2) Show the search process using Javascript, jQuery, and CSS.
+1)Build a visual representation of the sorting process using Javascript, jQuery, and HTML. 
+
+2)Show the search process using Javascript, jQuery, and CSS.
 
 These are the initial problems that I want to solve. The sort algorithm should be seen in real time, i.e, I want the sorting process to happen visually on the HTML page. So you will see each element being moved to it's respective position until the entire array is sorted. 
 
