@@ -78,12 +78,14 @@ function binary_search(value, values, n) {
 	return -1;
 }
 
-
+/*
+ * Get a needle dynamically from user input
+ */
 function getNeedle() {
-	var select = document.querySelector("input");
-	select.addEventListener("change", function() {
+	var input = document.querySelector("input");
+	input.addEventListener("change", function() {
 		
-		var number = Number(select.value);
+		var number = Number(input.value);
 		if(!isNaN(number)) {
 			binary_search(number, listToSort , sortedLength);
 		} else {
