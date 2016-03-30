@@ -64,7 +64,7 @@ function binary_search(value, values, n) {
 	while(min <= max) {
 		middleIndex = Math.floor((min + max) / 2);
 		if(values[middleIndex] === value) {
-			console.log("You found the needle " + values[middleIndex] + ".");
+			$('.message').text("You found " + values[middleIndex] + ".");
 			return middleIndex;
 		}
 		if(values[middleIndex] < value) {
@@ -74,9 +74,23 @@ function binary_search(value, values, n) {
 			max = middleIndex - 1;
 		}
 	}
-	console.log(value + " not found.");
+	$('.message').text(value + " not found.");
 	return -1;
 }
 
-// search the newly sorted array
-binary_search(12, listToSort , sortedLength);
+
+function getNeedle() {
+	var select = document.querySelector("input");
+	select.addEventListener("change", function() {
+		
+		var number = Number(select.value);
+		if(!isNaN(number)) {
+			binary_search(number, listToSort , sortedLength);
+		} else {
+			$('.message').text("Numbers only, please");
+		}
+		
+		
+	});
+}
+getNeedle();
